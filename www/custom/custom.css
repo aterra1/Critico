@@ -1,0 +1,65 @@
+@CHARSET "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #170386, #08059c, #030303);
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  form {
+    width: 80%; 
+    max-width: 400px;
+    margin-top: 30px;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  button {
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    color: #5851DB;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #E1E7FD;
+  }
+
+  .critico-logo {
+    margin: auto;
+	background-position: center;
+	background-image: url(images/logo.png);
+	background-repeat: no-repeat;
+  }
