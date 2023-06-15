@@ -6,9 +6,82 @@ body {
     font-family: Arial, sans-serif;
   }
 
+  img:not(#logo-login, #logo-bar, .posterBig) {
+    height: 100px;
+    float: left;
+    margin: 5px;
+  }
+
+  .posterBig {
+    height: 200px;
+    float: left;
+    margin: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    width: fit-content;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #movieList > li {
+    height: 110px;
+    border-bottom: #ffffff;
+    border-width: 1px;
+    border-style: none none solid none;
+  }
+
+  #reviews > li {
+    border-bottom: #ffffff;
+    border-width: 1px;
+    border-style: none none solid none;
+    margin-bottom: 5px;
+  }
+  
+  li > h4 {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-weight: bold;
+    color: #ffffff;
+    padding-left: 100px;
+    padding-right: 15px;
+    padding-top: 10px;
+  }
+
+  #reviews {
+    margin: 10px;
+
+  }
+
+  #review-area {
+    width: 100%;
+    height: 300px;
+  }
+
+  .star {
+    color: gold;
+    font-size: 24px;
+    display: inline-block;
+  }
+
+  .rating {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   #logo-login {
 
     width: 150px;
+  }
+
+  #tituloApp {
+    font-family:'Lucida Sans Unicode';
   }
   
   .login-container {
@@ -17,17 +90,17 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: linear-gradient(to bottom, #170386, #08059c, #030303);
+    background-image: linear-gradient(45deg, #272727, #030303);
     color: #ffffff;
     text-align: center;
   }
   
   h1 {
-    font-size: 28px;
+    font-size: 45px;
     margin-bottom: 30px;
   }
   
-  form {
+  .sign {
     width: 80%; 
     max-width: 400px;
     margin-top: 30px;
@@ -38,7 +111,7 @@ body {
     margin-bottom: 20px;
   }
   
-  input {
+  .signInput {
     width: 100%;
     height: 40px;
     padding: 10px;
@@ -50,14 +123,83 @@ body {
   button {
     width: 100%;
     height: 40px;
-    background-color: #ffffff;
-    color: #5851DB;
+    background-color: #000000;
+    color: #ffffff;
     font-size: 14px;
-    border: none;
+    font-weight: bold;
+    border: solid 2px #ffffff;
     border-radius: 5px;
     cursor: pointer;
+    align-self: center;
   }
   
   button:hover {
-    background-color: #E1E7FD;
+    background-color: #ffffff;
+    color: #000000;
   }
+
+  .centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%; 
+    max-width: 400px;
+  }
+
+  .app-background {
+    background-image: linear-gradient(45deg, #272727, #030303);
+    color: #ffffff;
+  }
+
+  #main-header {
+    height: 50px; 
+    border-bottom: solid 2px #ffffff;
+  }
+
+  #logo-bar {
+    float: left;
+    max-height:100%; 
+    max-width:100%;
+    padding: 5px;
+  }
+
+  img#user-icon {
+    float: right;
+    max-height:100%; 
+    max-width:100%;
+    padding: 5px;
+    margin: 0px;
+  }
+
+  .search-container {
+    max-height: 100%;
+    max-width: 80%;
+    padding: 5px;
+    float: right;
+  }
+
+  #search-input {
+    width: 100%;
+    height:fit-content;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    float: left;
+  }
+  
+  #search-button {
+    float: right;
+    width: fit-content;
+    height: fit-content;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border: solid 2px #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  
