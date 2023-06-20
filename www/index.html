@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MobileUI</title>
+    <title>Critico</title>
     <meta name="viewport" content="minimal-ui, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
@@ -37,17 +37,16 @@
                     <div class="login-container">
                         <img src="custom\images\logo.png" id="logo-login">
                         <h1 id="tituloApp">Crítico</h1>
-                        <form class="sign">
+                        <div class="sign">
                             <div class="input-wrapper">
-                            <input type="text" class="signInput" placeholder="Correo electrónico" required>
+                            <input id="signInName" type="text" class="signInput" placeholder="Nombre de Usuario" required>
                             </div>
                             <div class="input-wrapper">
-                            <input type="password" class="signInput" placeholder="Contraseña" required>
+                            <input id="signInPass" type="password" class="signInput" placeholder="Contraseña" required>
                             </div>
-                            <button id="ingresar" type="submit">Iniciar sesión</button>
+                            <button id="login">Iniciar sesión</button>
                             <div style="height: 30px;"></div>
-                            
-                        </form>
+                        </div>
                         <h4 style="color: gray;">¿No tienes usuario?</h4>
                         <button id="registro" class="centrado">Registrarse</button>
                     </div>
@@ -57,19 +56,19 @@
                     
                     <div class="login-container">
                         <h1 id="tituloApp">Crítico</h1>
-                        <form class="sign">
+                        <div class="sign">
                             <div class="input-wrapper">
-                                <input type="text" class="signInput" placeholder="Nombre de Usuario" required>
+                                <input id="signName" type="text" class="signInput" placeholder="Nombre de Usuario" required>
                             </div>
                             <div class="input-wrapper">
-                                <input type="text" class="signInput" placeholder="Correo electrónico" required>
+                                <input id="signMail" type="text" class="signInput" placeholder="Correo electrónico" required>
                             </div>
                             <div class="input-wrapper">
-                                <input type="password" class="signInput" placeholder="Contraseña" required>
+                                <input id="signPass" type="password" class="signInput" placeholder="Contraseña" required>
                             </div>
-                            <button id="crearUsuario" type="submit">Registrarse</button>
+                            <button id="createUser">Registrarse</button>
                             <div style="height: 30px;"></div>
-                        </form>
+                        </div>
 
                         <button id="retorno" class="centrado">Cancelar</button>
                     </div>
@@ -83,7 +82,6 @@
                     
 					<div class="mui-page-body mui-scrollable" id="home-body" style="margin-top: 10px;">
 						
-                        
                         <div id='click'> 
                         <!-- important for scroll! -->
 						<!-- your code here -->
@@ -100,7 +98,6 @@
                     </div>
                     
 					<div class="mui-page-body mui-scrollable" style="margin-top: 10px;">
-						
                         
                         <div id='click'> 
                         <!-- important for scroll! -->
@@ -120,24 +117,45 @@
                                 <a id="mainTrailer"><button>Ver Trailer</button></a>
                                 <div style="margin: 10px; text-align: justify;" id="mainDescription"></div>
                                 <div style="margin-left: 10px; margin-right: 10px;">
-                                    <h2 style="margin-bottom: 5px;">Dejanos tu reseña</h2>
-                                    <textarea id="review-area">que haya texto aca</textarea>
+                                    <h2 style="margin-bottom: 5px; margin-top: 5px; float: left;">Dejanos tu reseña</h2>
+                                    <select name="userStars" id="userStars" style="float: right; height: 35px;">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <textarea id="review-area">Puedes escribir tu opinion aqui</textarea>
+                                    
                                     <button id="sendReview">Enviar</button>
                                 </div>
-                                <ul id="reviews">
-                                    <li>
-                                        <h4>user1</h4>
-                                        <div>me parece una porqueria la telenovela esta</div>
-                                    </li>
-                                    <li>
-                                        <h4>user2</h4>
-                                        <div>ta buena, miarala</div>
-                                    </li>
-                                    <li>
-                                        <h4>user3</h4>
-                                        <div style="text-align: justify;">ndea, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur finibus suscipit. Phasellus tellus libero, hendrerit at nisi a, pretium ornare tellus. Donec nulla nibh, tristique ac nulla quis, interdum volutpat augue. Nunc commodo dapibus velit. Sed pulvinar neque ullamcorper dolor porta, nec imperdiet mauris consequat. Proin imperdiet, dolor non malesuada tincidunt, purus ipsum pharetra velit, ac dictum ex nisl at nisl. Ut vestibulum efficitur elit, sed commodo diam tincidunt et. Quisque id est id diam commodo auctor ac eu nisl. Sed ac dignissim ligula. Vestibulum congue suscipit arcu, vitae ultricies tortor viverra sed. Phasellus non porta diam. Vestibulum id blandit felis.</div>
-                                    </li>
-                                </ul>
+                                <ul id="reviews"></ul>
+                            </div>
+                        
+						</div>
+					</div>
+				</div>
+
+                <div id='pageUser' class="mui-page  app-background">
+                    <div id="main-header">
+                        <img src="custom\images\logo.png" id="logo-bar">
+                        <img src="custom\images\user.png" id="user-icon">
+                    </div>
+                    
+					<div class="mui-page-body mui-scrollable" id="home-body" style="margin-top: 10px;">
+						
+                        <div id='click'> 
+                        <!-- important for scroll! -->
+						<!-- your code here -->
+                            <div class="profileContainer">
+                                <div class="profile">
+                                    <img src="custom\images\user.png">
+                                    <h2 id="profileName"></h2>
+                                </div>
+                                <div class="personalReviews">
+                                    <h1>Tus Reseñas</h1>
+                                    <ul id="userReviews"></ul>
+                                </div>
                             </div>
                         
 						</div>
